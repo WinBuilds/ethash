@@ -1,22 +1,27 @@
-[![Build Status](https://travis-ci.org/ethereum/ethash.svg?branch=master)](https://travis-ci.org/ethereum/ethash)
-[![Windows Build Status](https://ci.appveyor.com/api/projects/status/github/debris/ethash?branch=master&svg=true)](https://ci.appveyor.com/project/debris/ethash-nr37r/branch/master)
+# Ethash WinBuild
+
+The binary outputs of the Visual Studio project files have been reconfigured to follow the pattern common all winbuild repositories. The Visual Studio project files can be found under the `/windows` directory.
+
+1. Output goes to:
+`$(SolutionDir)..\..\..\..\\build_<tool>_<platform>\<configuration>\[lib|bin|include]`
+
+2. Output library targets are named: `$(ProjectName)lib.lib` , `$(ProjectName)dll.dll`, and the import library is named `$(ProjectName)dll.lib`
+
+3. Executables (`.exe`) and dynamic link libraries (`.dll`) go to `bin/`, static and import libraries go to `lib/`, and public header files (.h) go to `include/`.
+
+
+This library opionally depends on the [cryptopp](https://github.com/winbuilds/cryptopp) library. 
+
+####Conditional Compilation Manifest Constants
+
+**`WITH_CRYPTOPP`** - Defined by default.   
+
+- If defined, the implementations of functions `SHA3_256()` and `SHA3_512()` are taken from the `cryptopp` library.
+- If not defined, the internal versions are used.
+
+
 
 # Ethash
 
-For details on this project, please see the Ethereum wiki:
-https://github.com/ethereum/wiki/wiki/Ethash
+Ethash is the planned Proof-of-Work mining algorithm for Ethereum 1.0.  For details on the `ethash algorithm`, please see the [Ethereum wiki](https://github.com/ethereum/wiki/wiki/Ethash).
 
-### Coding Style for C++ code:
-
-Follow the same exact style as in [cpp-ethereum](https://github.com/ethereum/cpp-ethereum/blob/develop/CodingStandards.txt)
-
-### Coding Style for C code:
-
-The main thing above all is code consistency.
-
-- Tabs for indentation. A tab is 4 spaces
-- Try to stick to the [K&R](http://en.wikipedia.org/wiki/Indent_style#K.26R_style),
-  especially for the C code.
-- Keep the line lengths reasonable. No hard limit on 80 characters but don't go further
-  than 110. Some people work with multiple buffers next to each other.
-  Make them like you :)

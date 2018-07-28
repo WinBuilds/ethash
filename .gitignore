@@ -4,9 +4,17 @@
 .vagrant/
 *.pyc
 build/
+build-*/
+build_*/
 pyethash.egg-info/
 *.so
 *~
 *.swp
 MANIFEST
 dist/
+
+*.lnk
+*.VC.db
+*.VC.opendb
+.vs/
+ipch/

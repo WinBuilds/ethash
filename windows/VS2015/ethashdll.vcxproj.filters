@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\libethash\compiler.h" />
+    <ClInclude Include="..\..\src\libethash\data_sizes.h" />
+    <ClInclude Include="..\..\src\libethash\endian.h" />
+    <ClInclude Include="..\..\src\libethash\ethash.h" />
+    <ClInclude Include="..\..\src\libethash\fnv.h" />
+    <ClInclude Include="..\..\src\libethash\internal.h" />
+    <ClInclude Include="..\..\src\libethash\io.h" />
+    <ClInclude Include="..\..\src\libethash\mmap.h" />
+    <ClInclude Include="..\..\src\libethash\sha3.h" />
+    <ClInclude Include="..\..\src\libethash\sha3_cryptopp.h" />
+    <ClInclude Include="..\..\src\libethash\util.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\libethash\internal.c" />
+    <ClCompile Include="..\..\src\libethash\io.c" />
+    <ClCompile Include="..\..\src\libethash\io_win32.c" />
+    <ClCompile Include="..\..\src\libethash\mmap_win32.c" />
+    <ClCompile Include="..\..\src\libethash\sha3_cryptopp.cpp" />
+    <ClCompile Include="..\..\src\libethash\util_win32.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\ethashdll.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

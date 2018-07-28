@@ -255,10 +255,10 @@ static bool ethash_hash(
 }
 
 void ethash_quick_hash(
-	ethash_h256_t* return_hash,
-	ethash_h256_t const* header_hash,
-	uint64_t nonce,
-	ethash_h256_t const* mix_hash
+   ethash_h256_t* return_hash,
+   ethash_h256_t const* header_hash,
+   const uint64_t nonce,
+   ethash_h256_t const* mix_hash
 )
 {
 	uint8_t buf[64 + 32];

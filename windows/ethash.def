@@ -1,0 +1,15 @@
+LIBRARY ethash
+DESCRIPTION "Ethash is the planned PoW algorithm for Ethereum 1.0"
+EXPORTS
+   ethash_light_new
+   ethash_light_delete
+   ethash_light_compute
+   ethash_full_new
+   ethash_full_delete
+   ethash_full_compute
+   ethash_full_dag
+   ethash_full_dag_size
+   ethash_get_seedhash
+
+
+
