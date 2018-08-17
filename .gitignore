@@ -16,5 +16,6 @@ dist/
 *.lnk
 *.VC.db
 *.VC.opendb
+*.user
 .vs/
 ipch/

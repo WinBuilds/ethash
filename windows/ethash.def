@@ -1,5 +1,4 @@
-LIBRARY ethash
-DESCRIPTION "Ethash is the planned PoW algorithm for Ethereum 1.0"
+LIBRARY ethashdll
 EXPORTS
    ethash_light_new
    ethash_light_delete
